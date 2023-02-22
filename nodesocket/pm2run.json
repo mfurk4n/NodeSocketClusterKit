@@ -1,0 +1,36 @@
+{
+    "apps": [
+        {
+            "script": "index.js",
+            "instances": "1",
+            "exec_mode": "cluster",
+            "name": "primary",
+            "env_production": {
+                "name": "prod-primary",
+                "PORT": 3001,
+                "NODE_ENV": "production"
+            },
+            "env_development": {
+                "name": "dev-primary",
+                "PORT": 3000,
+                "NODE_ENV": "development"
+            }
+        },
+        {
+            "script": "index.js",
+            "instances": "-1",
+            "exec_mode": "cluster",
+            "name": "replica",
+            "env_production": {
+                "name": "prod-replica",
+                "PORT": 3001,
+                "NODE_ENV": "production"
+            },
+            "env_development": {
+                "name": "dev-replica",
+                "PORT": 3000,
+                "NODE_ENV": "development"
+            }
+        }
+    ]
+}
