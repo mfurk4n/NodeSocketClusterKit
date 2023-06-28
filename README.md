@@ -1,4 +1,6 @@
-# NodeSocketIOwPM2ClusterMode
+# Owner avatar
+NodeSocketClusterKit
+
 Scale a Socket.IO server with PM2
 
 ## Run
